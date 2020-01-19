@@ -26,21 +26,21 @@ def qimai_login():
     # 2
     url = 'https://api.qimai.cn/account/pageCheck/type/signin'
     analysis = jsdata.call('get_analysis', url, '{}')
-    analysis = json.loads(analysis).get('analysis')
+#     analysis = json.loads(analysis).get('analysis')
     url = 'https://api.qimai.cn/account/pageCheck/type/signin?analysis={}'.format(urllib.parse.quote(analysis))
     html = req.get(url, headers=headers)
     print(html.text)
     # 3
     url = 'https://api.qimai.cn/account/userinfo'
     analysis = jsdata.call('get_analysis', url, '{}')
-    analysis = json.loads(analysis).get('analysis')
+#     analysis = json.loads(analysis).get('analysis')
     url = 'https://api.qimai.cn/account/userinfo?analysis={}'.format(urllib.parse.quote(analysis))
     html = req.get(url, headers=headers)
     print(html.text)
     # 4
     url = 'https://api.qimai.cn/index/index'
     analysis = jsdata.call('get_analysis', url, '{}')
-    analysis = json.loads(analysis).get('analysis')
+#     analysis = json.loads(analysis).get('analysis')
     url = 'https://api.qimai.cn/index/index?analysis={}'.format(urllib.parse.quote(analysis))
     html = req.get(url, headers=headers)
     print(html.text)
@@ -53,7 +53,7 @@ def qimai_login():
     captcha = input('请输入验证码:')
     url = 'https://api.qimai.cn/account/signinForm'
     analysis = jsdata.call('get_analysis', url, '{}')
-    analysis = json.loads(analysis).get('analysis')
+#     analysis = json.loads(analysis).get('analysis')
     login_url = 'https://api.qimai.cn/account/signinForm?analysis={}'.format(urllib.parse.quote(analysis))
     data = {
         'username': username,
