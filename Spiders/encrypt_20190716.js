@@ -599,7 +599,7 @@ return CryptoJS.enc.Base64.stringify(src);
 // eg: get_analysis("https://api.qimai.cn/rank/indexPlus/brand_id/1", ["2019-07-15", "5000", "all", "cn", "iphone"])
 function get_analysis(url, m) {
 var e = +new Date - 1105735 - 1515125653845;
-m = m.sort().join(""); //"2019-07-155000allcniphone"
+// m = m.sort().join(""); //"2019-07-155000allcniphone"
 src = CryptoJS.enc.Utf8.parse(m);
 m = CryptoJS.enc.Base64.stringify(src); // "MjAxOS0wNy0xNTUwMDBhbGxjbmlwaG9uZQ=="
 m += "@#" + url.replace("https://api.qimai.cn", ""); // 将url去掉"https://api.qimai.cn"的部分
